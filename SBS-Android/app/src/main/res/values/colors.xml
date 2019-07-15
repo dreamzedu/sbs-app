@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>-->
+
+
+    <color name="colorPrimary">#4A148C</color>
+    <color name="colorPrimaryDark">#311B92</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorSubHeading">#28b5e4</color>
+    <color name="btn_face">#B71C1C</color>
+    <color name="font_light">#ffffff</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="colorError">#EE2020</color>
+    <color name="btn_main_bg">#B71C1C</color>
+    <color name="btn_main_face">#ffffff</color>
+</resources>

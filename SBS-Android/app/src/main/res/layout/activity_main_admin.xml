@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainAdminActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome: "
+            android:id="@+id/txtUsername"
+            android:layout_marginTop="-10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+<android.support.v7.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/primary_activities"
+                android:layout_margin="@dimen/text_margin"/>
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="2"
+                android:layout_gravity="center_horizontal">
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="@dimen/main_btn_width"
+                android:layout_height="@dimen/main_btn_height"
+                android:id="@+id/nav_take_survey"
+                android:text="@string/take_survey"
+                android:onClick="onNavigationButtonClicked"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:background="@color/btn_main_bg"
+                android:textColor="@color/btn_main_face"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
+                    android:id="@+id/nav_draft_survey"
+                    android:text="@string/view_draft_survey"
+                    android:onClick="onNavigationButtonClicked"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:layout_marginBottom="@dimen/common_margin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:background="@color/btn_main_bg"
+                    android:textColor="@color/btn_main_face"
+                    />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
+                    android:id="@+id/nav_manage_survey"
+                    android:text="@string/manage_survey"
+                    android:onClick="onNavigationButtonClicked"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/common_margin"
+                    android:layout_marginBottom="@dimen/common_margin"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:background="@color/btn_main_bg"
+                    android:textColor="@color/btn_main_face"/>
+            </GridLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/groupViewReports"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/view_reports"
+                android:layout_margin="@dimen/text_margin"/>
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="2"
+                android:layout_gravity="center">
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="@dimen/main_btn_width"
+                android:layout_height="@dimen/main_btn_height"
+                android:id="@+id/nav_report_district"
+                android:text="@string/view_report_district"
+                android:onClick="onNavigationButtonClicked"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:background="@color/btn_main_bg"
+                android:textColor="@color/btn_main_face"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
+                    android:id="@+id/nav_report_block"
+                    android:text="@string/view_report_block"
+                    android:onClick="onNavigationButtonClicked"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:layout_marginBottom="@dimen/common_margin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:background="@color/btn_main_bg"
+                    android:textColor="@color/btn_main_face"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
+                    android:id="@+id/nav_report_panchayat"
+                    android:text="@string/view_report_panchayat"
+                    android:onClick="onNavigationButtonClicked"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/common_margin"
+                    android:layout_marginBottom="@dimen/common_margin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:background="@color/btn_main_bg"
+                    android:textColor="@color/btn_main_face"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="@dimen/main_btn_width"
+                    android:layout_height="@dimen/main_btn_height"
+                    android:id="@+id/nav_report_benef"
+                    android:text="@string/view_report_benef"
+                    android:onClick="onNavigationButtonClicked"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:layout_marginBottom="@dimen/common_margin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:background="@color/btn_main_bg"
+                    android:textColor="@color/btn_main_face"/>
+            </GridLayout>
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/groupManageMasterData"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manage_master_data"
+                android:layout_margin="@dimen/text_margin"/>
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="2"
+                android:columnCount="2"
+                android:layout_gravity="center">
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="@dimen/main_btn_width"
+            android:layout_height="@dimen/main_btn_height"
+            android:id="@+id/nav_manage_block"
+            android:text="@string/manage_blocks"
+            android:onClick="onNavigationButtonClicked"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:background="@color/btn_main_bg"
+            android:textColor="@color/btn_main_face"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="@dimen/main_btn_width"
+            android:layout_height="@dimen/main_btn_height"
+            android:id="@+id/nav_manage_panchayat"
+            android:text="@string/manage_panchayats"
+            android:onClick="onNavigationButtonClicked"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:background="@color/btn_main_bg"
+            android:textColor="@color/btn_main_face"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="@dimen/main_btn_width"
+                android:layout_height="@dimen/main_btn_height"
+                android:id="@+id/nav_manage_user"
+                android:text="@string/manage_users"
+                android:onClick="onNavigationButtonClicked"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:background="@color/btn_main_bg"
+                android:textColor="@color/btn_main_face"/>
+            </GridLayout>
+
+        </LinearLayout>
+</android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

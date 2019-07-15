@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SurveyActivity"
+    tools:showIn="@layout/activity_survey">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/group_editSurvey">
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/blockSpinner"
+            android:autofillHints="@string/block_caption">
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/panchayatSpinner"
+            android:autofillHints="@string/panchayat_caption"></android.support.v7.widget.AppCompatSpinner>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLength="45"
+            android:ems="5"
+            android:textSize="16dp"
+            android:hint="@string/benef_name"
+            android:id="@+id/txtName"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLength="45"
+            android:ems="5"
+            android:textSize="16dp"
+            android:hint="@string/benef_father_name"
+            android:id="@+id/txtFatherName"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLength="15"
+            android:ems="5"
+            android:textSize="16dp"
+            android:hint="@string/benef_adhar"
+            android:id="@+id/txtAdhar"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            android:ems="5"
+            android:textSize="16dp"
+            android:hint="@string/benef_family_count"
+            android:id="@+id/txtFamilyCount"/>
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:layout_margin="3dp"
+            android:id="@+id/pnlQuestions">
+        </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        android:layout_margin="3dp">
+        <Button
+            android:id="@+id/btnSaveDraft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnSave_title"
+            android:layout_weight="1"
+            android:layout_gravity="end|center"
+            android:background="@color/btn_face"
+            android:textColor="@color/font_light"
+            android:layout_margin="5dp"
+            android:onClick="onSaveAsDraftClick"/>
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnSubmit_title"
+            android:layout_weight="1"
+            android:layout_gravity="end|center"
+            android:background="@color/btn_face"
+            android:textColor="@color/font_light"
+            android:layout_margin="5dp"
+            android:onClick="onSubmitClick"/>
+    </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
